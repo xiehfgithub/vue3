@@ -1,0 +1,536 @@
+body {
+    width: 100%;
+    background-color: #FAFAFA;
+}
+.main{
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: #666666;
+}
+.flex-col{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.flex-col-item{
+    position: relative;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    color: #5A5A5A;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.flex-col-item:after{
+    content: "";
+    width: 1px;
+    height: 200%;
+    background: #E6E6E6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
+.flex-col-item:last-of-type:after{
+    display: none;
+}
+.font-orange{
+    color: #FE6D18!important;
+}
+/*鏈〉*/
+.header{
+    background-color: #ffffff;
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.circleInfo{
+    height: 60px;
+    padding: 20px 0 50px;
+}
+.circleInfo-tit{
+    padding-left: 1.02rem;
+    font-size: 0.16rem;
+    line-height: 0.16rem;
+    margin-top: 0.09rem;
+    margin-bottom: 0.1rem;
+    color: #000000;
+}
+.circleInfo-desc{
+    padding-left: 102px;
+    color: #999999;
+    line-height: 14px;
+}
+.circleInfo-logo{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+}
+.circleEnetr{
+    padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #5A5A5A;
+}
+.circleEnetr-top{
+    height: 24px;
+    overflow: hidden;
+}
+.circleEnetr-icon{
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+}
+.circleEnetr-bot{
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 9px;
+}
+.circle-introduce,.circle-vips,.circle-pay,.circle-subjectPreview,.circle-subject{
+    background-color: #ffffff;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: block;
+}
+.module-tit{
+    padding-left: 20px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    position: relative;
+}
+.module-tit span.fontNomal{
+    font-weight: normal;
+    font-size: 14px;
+    color: #666666;
+}
+.module-tit .rightDesc{
+    position: absolute;
+    right: 24px;
+    top: 0;
+    font-size: 14px;
+    display: inline-block;
+    height: 100%;
+}
+.module-content{
+    position: relative;
+    overflow: hidden;
+    padding: 14px 20px 30px;
+}
+.introduce-content,.pay-content{
+    line-height: 22px;
+    font-size: 14px;
+}
+.vips-content{
+    padding-right: 5px;
+    padding-bottom: 18px;
+}
+.vips-avatar{
+    float: left;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin-right: 14px;
+    margin-bottom: 12px;
+}
+.circle-subjectPreview{
+    margin-bottom: 179px;
+    background-color: #FAFAFA;
+}
+.subject-avatar{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.subject-header{
+    overflow: hidden;
+    padding-left: 66px;
+    margin-bottom: 12px;
+}
+.header-nick{
+    margin-top: 18px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 15px;
+}
+.header-time{
+    font-size: 13px;
+    line-height: 13px;
+    color: #999999;
+}
+.subject-content{
+    font-size: 17px;
+    line-height: 24px;       
+    color: #333333;
+    padding: 0 20px;
+}
+.subject-tools{
+    height: 16px;
+    line-height: 16px;
+    padding: 14px 30px 20px;
+    color: #CCCCCC;
+    font-size: 13px;
+}
+.subject-tools span{
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+}
+.tools-icon{
+    width: 16px;
+}
+.tools-icon-zan{
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_dianzan1.png);
+}
+.tools-icon-zanEnd{
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_dianzan2.png);
+}
+.tools-icon-comment{
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_pinglun.png);
+}
+.tools-icon-share{
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_fenxian.png);
+}
+.tools-zanCount{
+    margin-right: 24px;
+}
+.tools-commentCount{
+    margin-right: 33px;
+}
+.subject-replyToContent{
+    width: 345px;
+    box-sizing: border-box;
+    padding-left: 19px;
+    padding-right: 20px;
+    border-left: 2px #e6e6e6 solid;
+    margin-left: 30px;
+    overflow: hidden;
+    color: #666666;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.subject-pictures{
+    padding: 10px 50px 5px 20px;
+    font-size: 0;
+}
+.subject-pictures img{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.subject-pictures-1{
+    max-height: 400px;
+    overflow: hidden;
+}
+.pageCircleDetail .subject-pictures-1{
+	max-height: initial;
+    overflow: auto;
+}
+.subject-pictures-1 img{
+    width: 250px;
+    height: auto;
+    margin: 0;
+}
+.subject-pictures-24{
+    padding-right: 150px;
+}
+
+/*璇︽儏椤典腑鍥剧墖鍋氬吋瀹�*/
+.subject-comment .subject-pictures{
+	padding-left: 0;
+}
+.subject-comment .subject-pictures-24{
+	padding-right: 130px;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 375px;
+    height: 50px;
+    background-color: #FE6D18;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+/*鐐硅禐璇︽儏鍒楄〃*/
+.subject-zanList{
+    margin-left: 20px;
+    background-color: #FAFAFA;
+    width: 335px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 18px;
+}
+.subject-zanList span{
+    vertical-align: middle;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #5882B2;
+}
+.zanList-icon{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_dianzan2.png);
+}
+/*鍥炲鍐呭*/
+.comment-list{
+    position: relative;
+    padding: 0 20px;
+    overflow: hidden;
+}
+.comment-content{
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #666666;
+}
+.comment-user{
+    color: #5882B2;
+}
+.comment-anchor{
+    color: #FE6D18!important;
+}
+/* vue娓叉煋闂儊鍏煎 */
+[v-cloak] { display: none }
+/*鍦堜富鍏夌幆*/
+.icon-anchor{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 11px;
+    left: 15px;
+    background-image: url("//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_quanzhu.png");
+}
+/* 缃《銆佺簿鍗� */
+.header-nick span{
+    vertical-align: middle;
+}
+.icon-setTop{
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_zhiding.png);
+    margin-left: 5px;
+}
+.icon-goodTimeline{
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_jinghua.png);
+    margin-left: 5px;
+}
+/*鍏虫敞鍏紬鍙�*/
+.dialog{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    overflow: hidden;
+}
+.dialog-followWx{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+.followWx-content{
+    width: 271px;
+    height: 291px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    margin-top: -145.5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+.dialog-close{
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_guanbimianban.png);
+}
+.dialog-bottomLogo{
+    width: 185px;
+    height: 16px;
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_weixinzhifu.png);
+    margin: 0 auto;
+}
+
+.followWx-desc{
+    font-size: 14px;
+    color: #050505;
+    line-height: 24px;
+    margin: 34px 0 8px;
+    text-align: center;
+}
+.followWx-pic{
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 13px;
+}
+/*瀵瑰崟鎸憈imeline鎿嶄綔鏍�*/
+.subject-option{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_gengduo.png);
+}
+.subjectToolDetail-content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #f8f7f5;
+}
+.subjectToolDetail-item{
+    height:50px;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    line-height: 50px;
+    position: relative;
+}
+.subjectToolDetail-item-cancel{
+    margin-top: 15px;
+}
+/*鑿婅姳鍥�*/
+#wait{
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.icon-wait{
+    margin:0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    background-color: #222;
+    color: #fff;
+    line-height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    width: 100px;
+}
+/*鎵撹祻*/
+.tools-icon-sendGift{
+	background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/xcx_icon_dashang.png);
+}
+.tools-sendGiftCount{
+    margin-right: 33px;
+}
+/*鍙戝竷鍐呭涓秴閾炬帴*/
+.subject-content-href{
+    color: #5882B2!important;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.icon-href{
+	background-image: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/dt_url.png);
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+}
+/*搴曢儴鍏虫敞鏈嶅姟鍙�*/
+.fixed-followWx{
+    width: 375px;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.followWx-cblogo{
+    position: absolute;
+    width: 95px;
+    height: 30px;
+    left: 15.3px;
+    top: 10px;
+    background: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/logo_wx_ms.png);
+}
+.followWx-words{
+    position: absolute;
+    width: 151px;
+    height: 36px;
+    left: 130px;
+    top: 5px;
+    background: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/text_wx_ms.png);
+}
+.followWx-rightIcon{
+    position: absolute;
+    height: 34px;
+    width: 74px;
+    right: 10px;
+    bottom: 8px;
+    background: url(//static.cdn.icaibei.net/static/m/images/wx/stockZone/guanzhu.png);
+}

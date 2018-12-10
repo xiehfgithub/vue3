@@ -1,0 +1,377 @@
+body,
+div,
+dl,
+dt,
+dd,
+del,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+menu {
+	margin: 0;
+	padding: 0
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+fieldset,
+img {
+	border: 0
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+caption,
+th {
+	text-align: left
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal
+}
+
+q:before,
+q:after {
+	content: ''
+}
+
+abbr,
+acronym {
+	border: 0
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+	display: block
+}
+
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+	margin: 0;
+	padding: 0
+}
+
+html{
+	height: 100%;
+	font-size: 100px;
+}
+body {
+	font: 12px "微软雅黑";
+	background: #FAFAFA;
+	color: #333333;
+	overflow-x: hidden;
+	width: 100%;
+	width: 100vw;
+	height: auto;
+}
+body *{
+	background-size: cover;
+	background-size: 100% 100%!important;
+}
+li,
+ul,
+ol {
+	list-style: none outside none
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+	font-style: normal;
+	font-weight: normal
+}
+
+fieldset,
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	outline: none;
+}
+
+em {
+	font-style: normal
+}
+
+p,div {
+	white-space: normal;
+	word-break: break-all;
+	word-wrap: break-word
+}
+
+a {
+	text-decoration: none;
+	outline: 0
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+.bold {
+	font-weight: bold!important
+}
+
+.left {
+	float: left!important
+}
+
+.right {
+	float: right!important
+}
+
+.mid {
+	margin: 0 auto
+}
+
+.clr {
+	clear: both;
+	height: 0;
+	overflow: hidden
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both
+}
+
+.ind {
+	text-indent: 2em
+}
+
+.noborder {
+	border: 0!important
+}
+
+.padding0 {
+	padding: 0!important
+}
+
+.margin0 {
+	margin: 0!important
+}
+
+.none {
+	display: none !important
+}
+
+.block {
+	display: block
+}
+
+a,
+img,
+button,
+input,
+textarea,
+div {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.before-1 {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid #E6E6E6;
+	transform: scaleY(0.5)
+}
+
+.after-1 {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-bottom: 1px solid #E6E6E6;
+	transform: scaleY(0.5)
+}
+
+i {
+	font-style: normal !important;
+}
+
+.red {
+	color: #F3575B !important;
+}
+
+.green {
+	color: #64C67A !important;
+}
+
+.gold {
+	color: FE6C17 !important;
+	/*color: #FFA42F !important;*/
+}
+
+.hidden {
+	visibility: hidden !important;
+}
+
+.font-red {
+	color: #F3575B !important;
+}
+
+.font-green {
+	color: #64C67A !important;
+}
+
+.font-gold {
+	color: #FE6C17 !important;
+	/*color: #FE6D18 !important;*/
+}
+
+.flex-col{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+    flex-direction: row;
+}
+.flex-col-item{
+	height: 100%;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+    flex: 1;
+}
+.floor-col{
+	-webkit-box-flex: 1;-ms-flex: 1;flex: 1;position: relative;overflow: hidden;
+}
+.after:after{
+    content: "";
+    width: 200%;
+    height:1px;
+    background: #E6E6E6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
+.before:before {
+    content: "";
+    width: 200%;
+    height: 1px;
+    background: #E6E6E6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
+.jsCover{
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+.box {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+}
+#wait{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+.img-full{
+	width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    outline: none
+}
