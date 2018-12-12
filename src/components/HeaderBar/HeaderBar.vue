@@ -8,8 +8,8 @@
       	<div class="flex-sex">
       		<div :class="{
       			'flex-sex-item': true,
-      			'flex-sex-item-act': $store.state.headerBarPage.sexIndexAct == 0
-      		}" @click="ChangeHeaderBarPage_sexIndexAct(0)">男生</div>
+      			'flex-sex-item-act': $store.state.headerBarPage.sexIndexAct == 1
+      		}" @click="ChangeHeaderBarPage_sexIndexAct(1)">男生</div>
       		<!--<div :class="{
       			'flex-sex-item': true,
       			'flex-sex-item-act': $store.state.headerBarPage.sexIndexAct == 1
@@ -20,8 +20,8 @@
       		}" @click="$store.commit('ChangeHeaderBarPage_sexIndexAct',2)">男生</div>-->
       		<div :class="{
       			'flex-sex-item': true,
-      			'flex-sex-item-act': $store.state.headerBarPage.sexIndexAct == 1
-      		}" @click="$store.dispatch('ChangeHeaderBarPage_sexIndexAct',1)">女生</div>
+      			'flex-sex-item-act': $store.state.headerBarPage.sexIndexAct == 0
+      		}" @click="$store.dispatch('ChangeHeaderBarPage_sexIndexAct',0)">女生</div>
       	</div>
       	<!--登录-->
       	<div class="login-box">
@@ -52,14 +52,14 @@ export default {
     console.log('================HeaderBar==================');
   },
 	mounted:function(){
-		if(this.$route.query.redirect != undefined && typeof this.$store.state.loginUserInfo.userId == "undefined"){				
+		/* if(this.$route.query.redirect != undefined && typeof this.$store.state.loginUserInfo.userId == "undefined"){				
 			let com = confirm("未登录是否进行登录？");
 			if(com){
 				this.$router.push(""+this.$route.query.redirect)
 			}else{
 				
 			}			
-		}		
+		}		 */
 	},
   methods: {
     ChangeHeaderBarPage_sexIndexAct: function (type) {

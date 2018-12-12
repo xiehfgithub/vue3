@@ -9,23 +9,28 @@ export default {
   ChangeHeaderBarPage_sexIndexAct (state, platform) {
     state.headerBarPage.sexIndexAct = platform;
   },
-	checkLogin (state, platform) {
+	checkLogin (state, platform=true) {
 		if(localStorage.loginUserInfo && JSON.parse(localStorage.loginUserInfo).nick){	
-			state.loginUserInfo = JSON.parse(localStorage.loginUserInfo);
-			console.log("有登录信息");
-			return true
+			if(typeof state.loginUserInfo.userId == "undefined"){
+				state.loginUserInfo = JSON.parse(localStorage.loginUserInfo);
+				state.isLogin = true;
+			}
+			console.log("已登录");
 		}else{
-			console.log("无登录信息");
-			return false
+			state.isLogin = false;
+			console.log("未登录");
 		}
+		return platform;
 	},
   login (state, platform) {
     localStorage.loginUserInfo = JSON.stringify(platform);  	
 		state.loginUserInfo = platform;
+		state.isLogin = true;
   },
   loginOut (state, platform) {
   	localStorage.removeItem("loginUserInfo");
   	state.loginUserInfo = {};
+		state.isLogin = false;
   },
 	updateStockCircleCid (state, platform) {
 		state.stockCircleCid = platform % 2 == 0 ? 2 : 1;

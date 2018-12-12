@@ -34,13 +34,21 @@ export default {
 						
 		}  	
   },
-  login ({state,commit,dispatch }, platform){
+  login ({state,commit,dispatch }, platform=""){
   	let user;
   	if(!localStorage.loginUserInfo || (localStorage.loginUserInfo && !JSON.parse(localStorage.loginUserInfo).nick)){
   		let url = '/API/users/cblogin';
+			//模拟： 俩个账号["lstk","18701481351"]成功---login.vue
+			let _usename = "18701481351";
+			if(typeof platform == "function"){
+				_usename = platform.prototype.usename;
+			}		
+			console.log(`登录账号${_usename}`)
+			
+			
   		axios.get(url, {
 	      params: {
-	        usename: "18701481351",
+	        usename: _usename,
 	        password: "123456"
 	      },
 	      headers: {
@@ -51,10 +59,11 @@ export default {
 		      if(res.data.status == 1){
 		      	user = res.data.data;
 		      	commit('login', user);
-		      	dispatch('ChangeHeaderBarPage_sexIndexAct', user.sex == 0?1:user.sex);
+		      	dispatch('ChangeHeaderBarPage_sexIndexAct', user.sex == 1?user.sex:0);
+						typeof platform == "function" && platform()
 		      }else{
 		      	Vue.$toast({
-					  message: res.msg,
+					  message: res.data.msg,
 					  position: 'middle',
 					  duration: 1000
 					})
@@ -71,7 +80,7 @@ export default {
   	} else {
   		user = JSON.parse(localStorage.loginUserInfo);
   		commit('login', user);
-  		commit('ChangeHeaderBarPage_sexIndexAct', user.sex == 0?1:user.sex);
+  		commit('ChangeHeaderBarPage_sexIndexAct', user.sex == 1?user.sex:0);
   	}
   	
   }

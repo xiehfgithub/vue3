@@ -25,8 +25,6 @@
 		<br /><br />
 		<router-link to="/stockCircle/circleSelectHome">股票圈首页circleSelectHome</router-link>
 		<br /><br />		
-		<router-link to="/stockCircle/timelineList/aaa">股票圈列表timelineList-aaa</router-link>
-		<br /><br />		
 		<router-link to="/stockCircle/timelineList/1">股票圈列表timelineList-1</router-link>
 		<br /><br />		
 		<router-link to="/stockCircle/timelineList/2">股票圈列表timelineList-2</router-link>

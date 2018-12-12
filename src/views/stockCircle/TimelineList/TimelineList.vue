@@ -384,7 +384,7 @@ export default {
              * 跳转详情页
              * */
         fnGoDetailPage: function(tid) {
-            console.log(tid);
+            //console.log(tid);
             //console.log(this.$router);
             this.$router.push({ path: `/stockCircle/circleDetail/${tid}` });
         },

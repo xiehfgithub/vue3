@@ -1,5 +1,4 @@
 <template>
-	<transition name="slide-rightIn">
 		<div class="subpage circleSelectHome">
 			<HeaderNav title="股票圈首页"></HeaderNav>
 			<div class="main" v-if="pageData">
@@ -37,7 +36,6 @@
 			</div>
 						
 		</div>
-	</transition>
 </template>
 
 <script>
@@ -84,7 +82,7 @@ export default {
 
 <style lang="less" scoped>
 @import '~@/assets/less/stockCircle-common.less';
-	
+
 .main {
     width: 100%;
     height: 100%;

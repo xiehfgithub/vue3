@@ -64,10 +64,9 @@ export default {
             console.log('查看订单')
           }
       }) */
-        this.$store.commit('checkLogin');
         //设置cookie模拟请求test.m.icaibei.net线上
-        document.cookie =
-            'CAIBEI_LOGIN=TyupjZ33CLLpskjzy4PgvFfQvfMqFBxTgTtdbVveUdI%3D;path=/;expires=2019-12-01T09:29:57.000Z';
+        document.cookie = 'CAIBEI_LOGIN=TyupjZ33CLLpskjzy4PgvFfQvfMqFBxTgTtdbVveUdI%3D;path=/;expires=2019-12-01T09:29:57.000Z';
+        //this.$store.commit('checkLogin');	//路由里设置了检查 所有不需要在最外层模块再重复检查登录了
     }
 };
 </script>

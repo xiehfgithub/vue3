@@ -19,6 +19,7 @@ const router = new Router({
       name: 'index',
       component: Index,
       'meta': {
+				requiresAuth: false,
         keepAlive: true // 需要被缓存
       },
 			children:[
@@ -53,16 +54,22 @@ const router = new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       //component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    }, {
+      path: '/login',
+      name: 'login',
+      component: () => import('./views/stockCircle/Login/Login.vue')
     },
 		{
 			path: '/stockCircle/',
 			name: 'stockCircle',
-			component: () => import('./views/stockCircle/CircleSelectHome/CircleSelectHome.vue')
+			component: () => import('./views/stockCircle/CircleSelectHome/CircleSelectHome.vue'),
+			meta: { keepAlive: true }
 		},
 		{
 			path: '/stockCircle/CircleSelectHome',
 			name: 'stockCircleHome',
 			component: () => import('./views/stockCircle/CircleSelectHome/CircleSelectHome.vue'),
+			meta: { keepAlive: true },
 			beforeEnter: 	(to, from, next) => {
 				console.log(`方式1:单条路由内加beforeEnter守卫:列表页进入前守卫检查登录信息`);
 				console.log(from);
@@ -72,7 +79,9 @@ const router = new Router({
 		{
 			path: '/stockCircle/timelineList/:cid',
 			name: 'stockCircleTimeline',
-			component: () => import('./views/stockCircle/TimelineList/TimelineList.vue')
+			component: () => import('./views/stockCircle/TimelineList/TimelineList.vue'),
+			meta: { keepAlive: true }
+			
 		},
 		{
 			path: '/stockCircle/circleDetail/:tid',
@@ -103,11 +112,13 @@ const auth = {
 	}
 }
 router.beforeEach((to, from, next) => {	
-  if (to.matched.some(record => record.meta.requiresAuth)) {
+	store.commit("checkLogin");
+  if (to.matched.some(record => record.meta.requiresAuth)) {		
     // this route requires auth, check if logged in if not, redirect to login page.
-    if (auth.loggedIn()) {
+		console.log(store.state.isLogin);
+    if (!store.state.isLogin && auth.loggedIn()) {				
       next({
-        path: '/index',
+        path: '/login',
         query: { redirect: to.fullPath }
       })
     } else {
